@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Resultado Algoritmo{% endblock %}
+
+{% block content %}
+	<p class="resultado">El resultado de la ruta más corta es: {{ array[0] }}</p>
+	{% if array[2] %}
+		<p class="resultado">Solución de la ruta más corta: {{ array[2] }}</p>
+	{% endif %}
+	<p class="resultado">Tiempo empleado en realizar el algoritmo: {{ array[1] }}s</p>
+	<input type="button" onclick="location.reload()" class="volver" value="Lanzar de nuevo">
+{% endblock %}

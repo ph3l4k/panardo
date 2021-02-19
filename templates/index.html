@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Panardo Viajero{% endblock %}
+
+{% block content %}
+	<div>
+		<form action="{{ url_for('resultado') }}" method="post" enctype="multipart/form-data">
+			<p>Seleccione que secuencia quiere ejecutar</p>
+       		<input type="radio" name="opcion" value="1">		
+            <label for="opcion">Montecarlo</label><br>
+            <input type="radio" name="opcion" value="2">
+	        <label for="opcion">Vecino Mas Cercano</label><br><br>
+		    <label>Nº Combinaciones:&nbsp;<input type="text" name="combinaciones" class="rosita"><br><br>
+			<label>Sube tu archivo csv <input type="file" name="matriz" accept=".csv"></label><br><br>
+		    <input type="submit" name="enviaropcion" value="Calcular" class="rosita">
+		</form>
+	</div>
+{% endblock %}

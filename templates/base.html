@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="shorcut icon" href="{{ url_for('static', filename='imgs/Glider.ico') }}">
+</head>
+<body>
+    <header>
+        <p>Panardo Viajero</p>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>Ramanujan Team</p>
+    </footer>
+</body>
+</html>
